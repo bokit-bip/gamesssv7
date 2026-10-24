@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="robots" content="noindex, nofollow">
+  <title id="hub-title">My Drive - Google Drive</title>
+  <link id="hub-favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 87.3 78'%3E%3Cpath fill='%230066da' d='m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5z'/%3E%3Cpath fill='%2300ac47' d='M43.65 25 29.9 1.2c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44A9.06 9.06 0 0 0 0 53h27.5z'/%3E%3Cpath fill='%23ea4335' d='m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 10.15z'/%3E%3Cpath fill='%2300832d' d='M43.65 25 57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.15.45-4.5 1.2z'/%3E%3Cpath fill='%232684fc' d='M59.8 53H87.3c0-1.55-.4-3.1-1.2-4.5L72.35 24.7c-.8-1.4-1.95-2.5-3.3-3.3L55.3 45.2z'/%3E%3Cpath fill='%23ffba00' d='m73.55 76.8-13.75-23.8H27.5l13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h23.3c1.6 0 3.15-.4 4.5-1.2z'/%3E%3C/svg%3E">
+  <style>:root{--bg:#07090e;--surface:rgba(15,20,32,0.7);--surface-border:rgba(255,255,255,0.08);--card-bg:rgba(17,23,38,0.65);--card-hover:rgba(26,35,58,0.85);--accent:#6366f1;--accent-glow:rgba(99,102,241,0.4);--accent-gradient:linear-gradient(135deg,#6366f1,#8b5cf6);--text:#f8fafc;--text-muted:#94a3b8;--text-dim:#64748b;}*{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased;}body{background:var(--bg);background-image:radial-gradient(circle at 15% 15%,rgba(99,102,241,0.1) 0%,transparent 40%),radial-gradient(circle at 85% 85%,rgba(139,92,246,0.08) 0%,transparent 45%);background-attachment:fixed;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;min-height:100vh;overflow-x:hidden;scroll-behavior:smooth;}.top-nav{position:sticky;top:0;z-index:100;height:60px;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:rgba(7,9,14,0.82);border-bottom:1px solid var(--surface-border);display:flex;align-items:center;justify-content:space-between;padding:0 24px;transition:background 0.2s ease;}.nav-brand{display:flex;align-items:center;gap:12px;text-decoration:none;cursor:pointer;}.brand-icon{width:36px;height:36px;border-radius:10px;background:var(--accent-gradient);display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 0 16px var(--accent-glow);}.brand-text h1{font-size:16px;font-weight:800;letter-spacing:-0.3px;background:linear-gradient(135deg,#fff 40%,#cbd5e1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:flex;align-items:center;gap:8px;}.brand-badge{font-size:10px;font-weight:700;padding:2px 7px;border-radius:12px;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.35);color:#34d399;-webkit-text-fill-color:#34d399;}.nav-actions{display:flex;align-items:center;gap:10px;}.nav-pill{display:inline-flex;align-items:center;gap:6px;background:var(--surface);border:1px solid var(--surface-border);border-radius:8px;color:var(--text-muted);font-size:12px;font-weight:600;padding:6px 12px;cursor:pointer;outline:none;transition:all 0.15s ease;}.nav-pill:hover{background:rgba(255,255,255,0.1);color:#fff;border-color:rgba(255,255,255,0.2);}.nav-pill-panic{background:rgba(239,68,68,0.15);border-color:rgba(239,68,68,0.35);color:#fca5a5;}.nav-pill-panic:hover{background:#ef4444;color:#fff;border-color:#ef4444;box-shadow:0 0 14px rgba(239,68,68,0.5);}.nav-select{background:#111520;}.hero{max-width:1400px;margin:28px auto 20px;padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:16px;text-align:center;}.hero-title{font-size:32px;font-weight:800;letter-spacing:-0.8px;background:linear-gradient(135deg,#ffffff 30%,#94a3b8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}.hero-desc{color:var(--text-muted);font-size:14px;max-width:580px;line-height:1.5;}.search-wrapper{position:relative;width:100%;max-width:540px;margin-top:6px;}.search-icon{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--text-dim);pointer-events:none;}.search-input{width:100%;background:rgba(15,20,32,0.85);backdrop-filter:blur(12px);border:1px solid var(--surface-border);border-radius:12px;padding:13px 44px 13px 44px;color:#fff;font-size:14.5px;outline:none;transition:all 0.2s cubic-bezier(0.16,1,0.3,1);box-shadow:0 4px 20px rgba(0,0,0,0.25);}.search-input:focus{border-color:var(--accent);background:rgba(20,27,45,0.95);box-shadow:0 0 20px var(--accent-glow),0 4px 20px rgba(0,0,0,0.4);}.search-kbd{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:2px 7px;font-size:11px;color:var(--text-dim);font-weight:700;pointer-events:none;}.categories-bar{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:4px;max-width:1000px;}.chip{background:rgba(255,255,255,0.04);border:1px solid var(--surface-border);color:var(--text-muted);padding:6px 14px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.18s cubic-bezier(0.16,1,0.3,1);user-select:none;}.chip:hover{background:rgba(255,255,255,0.09);color:#fff;border-color:rgba(255,255,255,0.2);transform:translateY(-1px);}.chip.active{background:var(--accent-gradient);color:#fff;border-color:transparent;box-shadow:0 2px 12px var(--accent-glow);}.counter-pill{font-size:12px;color:var(--text-dim);font-weight:600;margin-top:2px;}.grid-container{max-width:1400px;margin:0 auto;padding:10px 24px 60px;}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px;}.card{background:var(--card-bg);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--surface-border);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform 0.22s cubic-bezier(0.16,1,0.3,1),border-color 0.22s ease,box-shadow 0.22s ease;cursor:pointer;contain:content;position:relative;}.card:hover{transform:translateY(-5px) scale(1.015);border-color:rgba(99,102,241,0.45);box-shadow:0 16px 32px rgba(0,0,0,0.5),0 0 18px rgba(99,102,241,0.2);}.card-thumb-wrap{width:100%;height:135px;background:#090c14;position:relative;overflow:hidden;}.card-thumb{width:100%;height:100%;object-fit:cover;transition:transform 0.3s cubic-bezier(0.16,1,0.3,1);}.card:hover .card-thumb{transform:scale(1.07);}.card-thumb-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(7,9,14,0.85) 100%);pointer-events:none;}.quick-play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.8);width:44px;height:44px;border-radius:50%;background:var(--accent-gradient);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 4px 16px rgba(0,0,0,0.5),0 0 16px var(--accent-glow);opacity:0;transition:all 0.2s cubic-bezier(0.16,1,0.3,1);z-index:2;pointer-events:none;}.card:hover .quick-play-btn{opacity:1;transform:translate(-50%,-50%) scale(1);}.card-badge{position:absolute;top:9px;right:9px;font-size:10px;font-weight:800;letter-spacing:0.4px;padding:3px 8px;border-radius:6px;backdrop-filter:blur(8px);text-transform:uppercase;z-index:2;}.cat-rose{background:rgba(244,63,94,0.2);border:1px solid rgba(244,63,94,0.4);color:#fb7185;}.cat-emerald{background:rgba(16,185,129,0.2);border:1px solid rgba(16,185,129,0.4);color:#34d399;}.cat-purple{background:rgba(139,92,246,0.2);border:1px solid rgba(139,92,246,0.4);color:#a78bfa;}.cat-cyan{background:rgba(6,182,212,0.2);border:1px solid rgba(6,182,212,0.4);color:#38bdf8;}.cat-amber{background:rgba(245,158,11,0.2);border:1px solid rgba(245,158,11,0.4);color:#fbbf24;}.cat-yellow{background:rgba(234,179,8,0.2);border:1px solid rgba(234,179,8,0.4);color:#fde047;}.cat-sky{background:rgba(14,165,233,0.2);border:1px solid rgba(14,165,233,0.4);color:#7dd3fc;}.cat-orange{background:rgba(249,115,22,0.2);border:1px solid rgba(249,115,22,0.4);color:#fdba74;}.cat-green{background:rgba(34,197,94,0.2);border:1px solid rgba(34,197,94,0.4);color:#4ade80;}.cat-indigo{background:rgba(99,102,241,0.2);border:1px solid rgba(99,102,241,0.4);color:#818cf8;}.card-content{padding:13px 14px;flex:1;display:flex;flex-direction:column;justify-content:space-between;gap:10px;}.card-title{font-size:14.5px;font-weight:700;color:#fff;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:-0.2px;}.card-sub{font-size:11.5px;color:var(--text-dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}.card-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;}.card-btn{padding:7px 0;border-radius:7px;font-size:11.5px;font-weight:700;cursor:pointer;border:none;display:flex;align-items:center;justify-content:center;gap:5px;transition:all 0.15s ease;}.card-btn-primary{background:var(--accent-gradient);color:#fff;box-shadow:0 2px 8px rgba(99,102,241,0.3);}.card-btn-primary:hover{box-shadow:0 4px 14px var(--accent-glow);filter:brightness(1.1);}.card-btn-secondary{background:rgba(255,255,255,0.05);border:1px solid var(--surface-border);color:var(--text-muted);}.card-btn-secondary:hover{background:rgba(255,255,255,0.1);color:#fff;}#modal-game-player{position:fixed;inset:0;z-index:99999;background:#05070a;display:flex;flex-direction:column;overflow:hidden;width:100%;height:100%;animation:modalFadeIn 0.22s cubic-bezier(0.16,1,0.3,1);}@keyframes modalFadeIn{from{opacity:0;transform:scale(0.99);}to{opacity:1;transform:scale(1);}}#modal-game-player.hidden{display:none !important;}.player-top-bar{height:52px;background:rgba(15,20,32,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--surface-border);display:flex;align-items:center;justify-content:space-between;padding:0 18px;gap:12px;flex-shrink:0;user-select:none;}.player-bar-left{display:flex;align-items:center;gap:12px;min-width:0;}.player-btn-back{background:linear-gradient(135deg,rgba(99,102,241,0.22),rgba(79,70,229,0.3));border:1px solid rgba(99,102,241,0.45);color:#a5b4fc;padding:6px 13px;border-radius:7px;font-size:12.5px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:all 0.15s ease;}.player-btn-back:hover{background:var(--accent);color:#fff;box-shadow:0 2px 10px var(--accent-glow);}.player-game-title{font-size:14.5px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}.player-live-dot{width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 8px #10b981;display:inline-block;}.player-bar-right{display:flex;align-items:center;gap:7px;flex-shrink:0;}.player-btn,.player-select{display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:5px 11px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#e2e8f0;font-size:12px;font-weight:600;cursor:pointer;outline:none;transition:all 0.15s ease;}.player-btn:hover{background:rgba(255,255,255,0.12);color:#fff;}.player-select{background:#111522;}.player-btn-panic{background:rgba(239,68,68,0.2);border-color:rgba(239,68,68,0.4);color:#fca5a5;}.player-btn-panic:hover{background:#ef4444;color:#fff;}.player-viewport{flex:1;position:relative;width:100%;height:calc(100% - 52px);background:#000;}#player-iframe{width:100%;height:100%;border:none;display:block;}.player-loading-spinner{position:absolute;inset:0;background:#07090e;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#94a3b8;font-size:13.5px;z-index:10;transition:opacity 0.25s ease;}.player-loading-spinner.hidden{opacity:0;pointer-events:none;}.spinner-ring{width:42px;height:42px;border:3px solid rgba(255,255,255,0.08);border-top-color:#6366f1;border-radius:50%;animation:spin 0.75s cubic-bezier(0.5,0.1,0.5,0.9) infinite;}@keyframes spin{to{transform:rotate(360deg);}}</style>
+  <script>
+    const TAILSCALE_HOST = "https://pop-leave.tailcb4af7.ts.net";
+    const ICONS = {"drive": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 87.3 78'%3E%3Cpath fill='%230066da' d='m6.6 66.85 3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5z'/%3E%3Cpath fill='%2300ac47' d='M43.65 25 29.9 1.2c-1.35.8-2.5 1.9-3.3 3.3l-25.4 44A9.06 9.06 0 0 0 0 53h27.5z'/%3E%3Cpath fill='%23ea4335' d='m73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75 7.65-13.25c.8-1.4 1.2-2.95 1.2-4.5H59.8l5.85 10.15z'/%3E%3Cpath fill='%2300832d' d='M43.65 25 57.4 1.2C56.05.4 54.5 0 52.9 0H34.4c-1.6 0-3.15.45-4.5 1.2z'/%3E%3Cpath fill='%232684fc' d='M59.8 53H87.3c0-1.55-.4-3.1-1.2-4.5L72.35 24.7c-.8-1.4-1.95-2.5-3.3-3.3L55.3 45.2z'/%3E%3Cpath fill='%23ffba00' d='m73.55 76.8-13.75-23.8H27.5l13.75 23.8c1.35.8 2.9 1.2 4.5 1.2h23.3c1.6 0 3.15-.4 4.5-1.2z'/%3E%3C/svg%3E", "classroom": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231e8e3e' d='M22 6.5C22 5.12 20.88 4 19.5 4h-15C3.12 4 2 5.12 2 6.5v11C2 18.88 3.12 20 4.5 20h15c1.38 0 2.5-1.12 2.5-2.5v-11z'/%3E%3Cpath fill='%23f9ab00' d='M20.5 5.5h-17c-.55 0-1 .45-1 1v11c0 .55.45 1 1 1h17c.55 0 1-.45 1-1v-11c0-.55-.45-1-1-1z'/%3E%3Ccircle cx='12' cy='10' r='2.2' fill='%23fff'/%3E%3Cpath fill='%23fff' d='M12 13.2c-2.4 0-4.5 1.2-4.5 2.5V17h9v-1.3c0-1.3-2.1-2.5-4.5-2.5z'/%3E%3Ccircle cx='7' cy='11' r='1.6' fill='%23fff' opacity='.8'/%3E%3Cpath fill='%23fff' opacity='.8' d='M7 13.5c-1.8 0-3.2.9-3.2 2V16h2.2v-.8c0-.6.4-1.2 1-1.7z'/%3E%3Ccircle cx='17' cy='11' r='1.6' fill='%23fff' opacity='.8'/%3E%3Cpath fill='%23fff' opacity='.8' d='M17 13.5c1.8 0 3.2.9 3.2 2V16H18v-.8c0-.6-.4-1.2-1-1.7z'/%3E%3C/svg%3E", "docs": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234285F4' d='M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6z'/%3E%3Cpath fill='%23A1C2FA' d='M14 2v6h6'/%3E%3Cpath fill='%23FFF' d='M8 12h8v1.5H8zm0 3h8v1.5H8zm0 3h5v1.5H8z'/%3E%3C/svg%3E", "canvas": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23E02424' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6z'/%3E%3C/svg%3E", "desmos": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232F7B18' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z'/%3E%3C/svg%3E", "default": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'%3E%3Cpath d='M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm3-3c-.83 0-1.5-.67-1.5-1.5S17.67 9 18.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z'/%3E%3C/svg%3E"};
+    const TITLES = {
+      drive: "My Drive - Google Drive",
+      classroom: "Classes",
+      docs: "Untitled document - Google Docs",
+      canvas: "Dashboard",
+      desmos: "Desmos | Graphing Calculator",
+      default: "BokitWare Arcade"
+    };
+    const FALLBACK_ICON = ICONS.default;
+
+    function imgErr(img) {
+      const step = parseInt(img.dataset.step || '0', 10);
+      const slug = img.dataset.slug || '';
+      const folder = img.dataset.folder || '';
+      const cand = img.dataset.cand || 'cover.jpg';
+      img.dataset.step = String(step + 1);
+
+      if (step === 0 && slug) {
+        img.src = 'covers/' + slug + '.jpg';
+      } else if (step === 1 && slug) {
+        img.src = 'covers/' + slug + '.png';
+      } else if (step === 2 && folder) {
+        img.src = 'https://pop-leave.tailcb4af7.ts.net/games/' + encodeURIComponent(folder) + '/' + cand;
+      } else {
+        img.onerror = null;
+        img.src = FALLBACK_ICON;
+      }
+    }
+
+    function setGlobalCloak(key) {
+      const title = TITLES[key] || TITLES.drive;
+      const icon = ICONS[key] || ICONS.drive;
+      document.title = title;
+      const fav = document.getElementById('hub-favicon');
+      if (fav) fav.href = icon;
+      try { localStorage.setItem('bokit_tab_cloak', key); } catch(e) {}
+    }
+
+    function openStealth(filename, folder) {
+      const win = window.open('about:blank', '_blank');
+      if (!win) { alert('Popup blocked.'); return; }
+      const curKey = localStorage.getItem('bokit_tab_cloak') || 'drive';
+      const curTitle = TITLES[curKey] || TITLES.drive;
+      const curIcon = ICONS[curKey] || ICONS.drive;
+      const base = document.baseURI || window.location.href;
+      const folderJson = JSON.stringify(folder || '');
+      const fileJson = JSON.stringify(filename || '');
+      const baseJson = JSON.stringify(base);
+
+      const html = '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + curTitle + '</title><link rel="icon" type="image/svg+xml" href="' + curIcon + '"><style>body,html{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#0b0e14;}iframe{width:100%;height:100%;border:none;display:block;}</style></head><body><iframe id="stealth-frame" allow="fullscreen; gamepad; autoplay; clipboard-write; encrypted-media"></iframe><scr' + 'ipt>' +
+        'var f = document.getElementById("stealth-frame");' +
+        'var base = ' + baseJson + ';' +
+        'var folder = ' + folderJson + ';' +
+        'var filename = ' + fileJson + ';' +
+        'var candidates = [];' +
+        'if (folder) {' +
+        '  candidates.push(new URL("games/" + encodeURIComponent(folder) + "/index.html", base).href);' +
+        '  candidates.push(new URL("content/" + encodeURIComponent(folder) + "/index.html", base).href);' +
+        '}' +
+        'if (filename) candidates.push(new URL(filename, base).href);' +
+        'if (folder) candidates.push("https://pop-leave.tailcb4af7.ts.net/games/" + encodeURIComponent(folder) + "/index.html");' +
+        'async function run() {' +
+        '  for (var i = 0; i < candidates.length; i++) {' +
+        '    var u = candidates[i];' +
+        '    try {' +
+        '      var res = await fetch(u);' +
+        '      if (res.ok) {' +
+        '        var text = await res.text();' +
+        '        var baseTag = "<base href=\"" + new URL("./", u).href + "\">";' +
+        '        var full = text.includes("<head>") ? text.replace("<head>", "<head>" + baseTag) : (baseTag + text);' +
+        '        var blob = new Blob([full], { type: "text/html" });' +
+        '        f.src = URL.createObjectURL(blob);' +
+        '        return;' +
+        '      }' +
+        '    } catch(e) {}' +
+        '  }' +
+        '  if (folder) f.src = "https://pop-leave.tailcb4af7.ts.net/games/" + encodeURIComponent(folder) + "/index.html";' +
+        '  else if (filename) f.src = new URL(filename, base).href;' +
+        '}' +
+        'run();' +
+        '</scr' + 'ipt></body></html>';
+      win.document.open();
+      win.document.write(html);
+      win.document.close();
+    }
+
+    function panicNow() { window.location.replace('https://classroom.google.com'); }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === '`' || e.key === '~') { e.preventDefault(); panicNow(); }
+    });
+
+    (function() {
+      try {
+        const saved = localStorage.getItem('bokit_tab_cloak') || 'drive';
+        if (TITLES[saved]) document.title = TITLES[saved];
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- Top Navigation -->
+  <header class="top-nav">
+    <div class="nav-brand" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      <div class="brand-icon">🎮</div>
+      <div class="brand-text">
+        <h1>BokitWare <span class="brand-badge">91 GAMES</span></h1>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <div id="live-clock" class="nav-pill" style="font-variant-numeric: tabular-nums;">--:-- --</div>
+      <select id="hub-cloak-select" class="nav-pill nav-select" onchange="setGlobalCloak(this.value)">
+        <option value="drive">🎭 Google Drive</option>
+        <option value="classroom">🎭 Google Classroom</option>
+        <option value="docs">🎭 Google Docs</option>
+        <option value="canvas">🎭 Canvas</option>
+        <option value="desmos">🎭 Desmos</option>
+        <option value="default">🎭 Cloak: Off</option>
+      </select>
+      <button class="nav-pill nav-pill-panic" onclick="panicNow()" title="Emergency Panic (Hotkey: ~)">🚨 Panic (~)</button>
+    </div>
+  </header>
+
+  <!-- Hero Header & Filter Bar -->
+  <div class="hero">
+    <h2 class="hero-title">Web Arcade &amp; Retro Library</h2>
+    <p class="hero-desc">Play 85+ optimized offline-compatible web games with stealth cloaking and instant fullscreen</p>
+    
+    <div class="search-wrapper">
+      <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input type="text" id="search-box" class="search-input" placeholder="Search games by title, series, or category..." autocomplete="off">
+      <span class="search-kbd">Ctrl K</span>
+    </div>
+
+    <div class="categories-bar" id="category-container">
+      <button class="chip active" data-cat="all">🎮 All Games</button>
+      <button class="chip" data-cat="action">⚔️ Action</button>
+      <button class="chip" data-cat="arcade">🕹️ Arcade</button>
+      <button class="chip" data-cat="sports">⚽ Sports</button>
+      <button class="chip" data-cat="puzzle">🧩 Puzzle</button>
+      <button class="chip" data-cat="horror">👻 Horror</button>
+      <button class="chip" data-cat="driving">🏎️ Driving</button>
+      <button class="chip" data-cat="multiplayer">👥 Multiplayer</button>
+      <button class="chip" data-cat="flash">⚡ Flash</button>
+    </div>
+    <div class="counter-pill" id="game-counter">Showing 91 of 91 games</div>
+  </div>
+
+  <!-- Games Grid -->
+  <div class="grid-container">
+    <div class="grid" id="game-grid"></div>
+  </div>
+
+  <!-- Fullscreen In-App Player Modal -->
+  <div id="modal-game-player" class="hidden">
+    <div class="player-top-bar">
+      <div class="player-bar-left">
+        <button class="player-btn-back" id="btn-player-back" onclick="closePlayer()" title="Back to Games (Esc)">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.6"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          <span>Back to Library</span>
+        </button>
+        <span class="player-live-dot" title="Active"></span>
+        <span class="player-game-title" id="player-game-title">Game</span>
+      </div>
+      <div class="player-bar-right">
+        <select id="player-cloak-select" class="player-select" onchange="setGlobalCloak(this.value)">
+          <option value="drive">🎭 Google Drive</option>
+          <option value="classroom">🎭 Google Classroom</option>
+          <option value="docs">🎭 Google Docs</option>
+          <option value="canvas">🎭 Canvas</option>
+          <option value="desmos">🎭 Desmos</option>
+          <option value="default">🎭 Cloak: Off</option>
+        </select>
+        <button class="player-btn" onclick="reloadGame()" title="Reload (R)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg> Reload</button>
+        <button class="player-btn" onclick="popoutCurrentGame()" title="about:blank (B)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Popout</button>
+        <button class="player-btn" onclick="togglePlayerFullscreen()" title="Fullscreen (F)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg> Fullscreen</button>
+        <button class="player-btn player-btn-panic" onclick="panicNow()" title="Panic (~)">🚨 Panic (~)</button>
+      </div>
+    </div>
+    <div class="player-viewport">
+      <div id="player-spinner" class="player-loading-spinner">
+        <div class="spinner-ring"></div>
+        <span id="player-loading-msg">Launching game in secure container...</span>
+      </div>
+      <iframe id="player-iframe" src="about:blank" allow="fullscreen; gamepad; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>
+    </div>
+  </div>
+
+  <script>
+    // Live Clock in Top Nav
+    function updateClock() {
+      const el = document.getElementById('live-clock');
+      if (!el) return;
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12 || 12;
+      el.textContent = `${hours}:${minutes} ${ampm}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    const GAMES_LIST = [["minus3", "-3", "-3", "Horror", "minus3.html", "cover.png"], ["minusB", "-B", "-B", "Horror", "minusb.html", "cover.png"], ["10minutestilldawn", "10 Minutes Till Dawn", "10 Minutes Till Dawn", "Action", "10minutestilldawn.html", "cover.jpg"], ["Arthur's Nightmare", "Arthur's Nightmare", "Arthur's Night Adventure", "Horror", "arthur-s-nightmare.html", "cover.png"], ["bad time simulator", "Bad Time Simulator (Sans Fight)", "Sans Rhythm Dodge (Sans Fight)", "Action", "bad-time-simulator.html", "cover.png"], ["baldis-basics", "Baldi's Basics", "Math School Challenge", "Horror", "baldis-basics.html", "cover.jpg"], ["basket random", "Basket Random", "Basket Random", "Sports", "basket-random.html", "cover.jpg"], ["basketballstars", "Basketball Stars", "Basketball Stars", "Sports", "basketballstars.html", "cover.png"], ["bigshotboxing", "Big Shot Boxing", "Big Shot Boxing", "Sports", "bigshotboxing.html", "cover.png"], ["blockblast", "Block Blast", "Block Blast", "Action", "blockblast.html", "cover.png"], ["bowmasters", "Bowmasters", "Bowmasters", "Action", "bowmasters.html", "cover.jpg"], ["boxingrandom", "Boxing Random", "Boxing Random", "Sports", "boxingrandom.html", "cover.jpg"], ["burgers and frights", "Burgers & Frights", "Burgers & Frights", "Horror", "burgers-and-frights.html", "cover.png"], ["cluster truck", "Clustertruck", "Platform Runner 3D", "Platformer", "cluster-truck.html", "cover.jpg"], ["crossy road", "Crossy Road", "Crossy Road", "Action", "crossy-road.html", "cover.png"], ["deltarune", "Deltarune", "Deltarune", "Action", "deltarune.html", "cover.jpg"], ["doki doki literature club", "Doki Doki Literature Club!", "Poetry Literature Club!", "Horror", "doki-doki-literature-club.html", "cover.png"], ["doom", "DOOM (1993)", "Retro Sci-Fi Maze (1993)", "Classics", "doom.html", "cover.jpg"], ["doom 2", "DOOM II: Hell on Earth", "Retro Sci-Fi Maze II: Hell on Earth", "Classics", "doom-2.html", "cover.jpg"], ["douchebaglife", "Douchebag Life", "Beach Lifestyle Sim", "Simulation", "douchebaglife.html", "cover.png"], ["drive-mad", "Drive Mad", "Drive Mad", "Action", "drive-mad.html", "cover.jpg"], ["ducklife1", "Duck Life", "Duck Life", "Duck Life", "ducklife1.html", "cover.jpg"], ["ducklife2", "Duck Life 2: World Champion", "Duck Life 2: World Champion", "Duck Life", "ducklife2.html", "cover.jpg"], ["ducklife3", "Duck Life 3: Evolution", "Duck Life 3: Evolution", "Duck Life", "ducklife3.html", "cover.jpg"], ["ducklife4", "Duck Life 4", "Duck Life 4", "Duck Life", "ducklife4.html", "cover.jpg"], ["fancypantsadventures", "Fancy Pants Adventures: World 1", "Fancy Pants Adventures: World 1", "Platformer", "fancypantsadventures.html", "cover.jpg"], ["fancypantsadventures2", "Fancy Pants Adventures: World 2", "Fancy Pants Adventures: World 2", "Platformer", "fancypantsadventures2.html", "cover.jpg"], ["fancypantsadventures3", "Fancy Pants Adventures: World 3", "Fancy Pants Adventures: World 3", "Platformer", "fancypantsadventures3.html", "cover.jpg"], ["fish.", "FISH", "FISH", "Action", "fish.html", "cover.png"], ["fnac", "Five Nights at Candy's", "Five Nights at Candy's", "Horror", "fnac.html", "cover.webp"], ["fnac2", "Five Nights at Candy's 2", "Five Nights at Candy's 2", "Horror", "fnac2.html", "cover.webp"], ["fnaf1", "Five Nights at Freddy's", "Night Shift Security", "Horror", "fnaf1.html", "cover.jpg"], ["fnaf2", "Five Nights at Freddy's 2", "Night Shift Security 2", "Horror", "fnaf2.html", "cover.jpg"], ["fnaf3", "Five Nights at Freddy's 3", "Night Shift Security 3", "Horror", "fnaf3.html", "cover.jpg"], ["fnaf4", "Five Nights at Freddy's 4", "Night Shift Security 4", "Horror", "fnaf4.html", "cover.jpg"], ["geodash", "Geometry Dash", "Geometry Dash", "Platformer", "geodash.html", "cover.jpg"], ["gladihoppers", "Gladihoppers", "Gladihoppers", "Action", "gladihoppers.html", "cover.jpg"], ["vicecity", "Grand Theft Auto: Vice City", "Grand Theft Auto: Vice City", "Action", "vicecity.html", "cover.jpg"], ["gunmayham", "Gun Mayhem", "Mayhem Arena", "Action", "gunmayham.html", "cover.jpg"], ["handless millionaire", "Handless Millionaire", "Handless Millionaire", "Casual", "handless-millionaire.html", "cover.png"], ["helltaker", "Helltaker", "Helltaker", "Action", "helltaker.html", "cover.jpg"], ["hobo1", "Hobo", "City Brawler", "Classics", "hobo1.html", "cover.jpg"], ["hobo2", "Hobo 2: Prison Brawl", "City Brawler 2: Escapade: Prison Brawl", "Classics", "hobo2.html", "cover.jpg"], ["hobo3", "Hobo 3: Wanted", "City Brawler 3: Wanted: Wanted", "Classics", "hobo3.html", "cover.jpg"], ["hobo4", "Hobo 4: Total War", "City Brawler 4: Tactics: Total War", "Classics", "hobo4.html", "cover.jpg"], ["hobo5", "Hobo 5: Space Brawls", "City Brawler 5: Orbit: Space Brawls", "Classics", "hobo5.html", "cover.jpg"], ["hobo6", "Hobo 6: HELL", "City Brawler 6: Inferno: HELL", "Classics", "hobo6.html", "cover.jpg"], ["hobo7", "Hobo 7: Heaven", "City Brawler 7: Zenith: Heaven", "Classics", "hobo7.html", "cover.jpg"], ["houseofhazards", "House of Hazards", "House of Hazards", "Action", "houseofhazards.html", "cover.png"], ["jetpack joy ride", "Jetpack Joyride", "Jetpack Joyride", "Action", "jetpack-joy-ride.html", "cover.png"], ["minecraft", "Minecraft (1.12.2)", "Minecraft (1.12.2)", "Action", "minecraft.html", "cover.png"], ["oneshot", "OneShot", "OneShot", "Action", "oneshot.html", "cover.jpg"], ["ovo", "OvO", "OvO", "Platformer", "ovo.html", "cover.jpg"], ["ovo2", "OvO 2", "OvO 2", "Platformer", "ovo2.html", "cover.jpg"], ["ovo3", "OvO 3 Dimensions", "OvO 3 Dimensions", "Platformer", "ovo3.html", "cover.jpg"], ["papasburgeria", "Papa's Burgeria", "Papa's Burgeria", "Papa's Series", "papasburgeria.html", "cover.jpg"], ["papascheeseria", "Papa's Cheeseria", "Papa's Cheeseria", "Papa's Series", "papascheeseria.html", "cover.jpg"], ["papasdonuteria", "Papa's Donuteria", "Papa's Donuteria", "Papa's Series", "papasdonuteria.html", "cover.jpg"], ["papasfreezeria", "Papa's Freezeria", "Papa's Freezeria", "Papa's Series", "papasfreezeria.html", "cover.jpg"], ["papashotdoggeria", "Papa's Hot Doggeria", "Papa's Hot Doggeria", "Papa's Series", "papashotdoggeria.html", "cover.jpg"], ["papaspancakeria", "Papa's Pancakeria", "Papa's Pancakeria", "Papa's Series", "papaspancakeria.html", "cover.jpg"], ["papaspastaria", "Papa's Pastaria", "Papa's Pastaria", "Papa's Series", "papaspastaria.html", "cover.jpg"], ["papaspizzeria", "Papa's Pizzeria", "Papa's Pizzeria", "Papa's Series", "papaspizzeria.html", "cover.jpg"], ["papassushiria", "Papa's Sushiria", "Papa's Sushiria", "Papa's Series", "papassushiria.html", "cover.jpg"], ["papastacomia", "Papa's Taco Mia!", "Papa's Taco Mia!", "Papa's Series", "papastacomia.html", "cover.jpg"], ["papaswingeria", "Papa's Wingeria", "Papa's Wingeria", "Papa's Series", "papaswingeria.html", "cover.jpg"], ["retrobowl", "Retro Bowl", "Retro Bowl", "Arcade", "retrobowl.html", "cover.png"], ["retrobowlcollege", "Retro Bowl College", "Retro Bowl College", "Arcade", "retrobowlcollege.html", "cover.png"], ["riddleschool1", "Riddle School", "Riddle School", "Riddle School", "riddleschool1.html", "cover.png"], ["riddleschool2", "Riddle School 2", "Riddle School 2", "Riddle School", "riddleschool2.html", "cover.png"], ["riddleschool3", "Riddle School 3", "Riddle School 3", "Riddle School", "riddleschool3.html", "cover.png"], ["riddleschool4", "Riddle School 4", "Riddle School 4", "Riddle School", "riddleschool4.html", "cover.png"], ["riddleschool5", "Riddle School 5", "Riddle School 5", "Riddle School", "riddleschool5.html", "cover.png"], ["riddletransfer1", "Riddle Transfer", "Riddle Transfer", "Riddle School", "riddletransfer1.html", "cover.png"], ["riddletransfer2", "Riddle Transfer 2", "Riddle Transfer 2", "Riddle School", "riddletransfer2.html", "cover.png"], ["sprunki", "Sprunki", "Sprunki", "Action", "sprunki.html", "cover.jpg"], ["stickmanhook", "Stickman Hook", "Stickman Hook", "Action", "stickmanhook.html", "cover.jpg"], ["sm64", "Super Mario 64", "Super Mario 64", "Arcade", "sm64.html", "cover.png"], ["tag", "Tag (2-4 Players)", "Tag (2-4 Players)", "Multiplayer", "tag.html", "cover.png"], ["tattletail", "Tattletail", "Tattletail", "Horror", "tattletail.html", "cover.jpg"], ["worldshardestgame1", "The World's Hardest Game", "The World's Hardest Game", "Arcade", "worldshardestgame1.html", "cover.jpg"], ["worldshardestgame2", "The World's Hardest Game 2", "The World's Hardest Game 2", "Arcade", "worldshardestgame2.html", "cover.jpg"], ["worldshardestgame3", "The World's Hardest Game 3", "The World's Hardest Game 3", "Arcade", "worldshardestgame3.html", "cover.png"], ["vex1", "Vex", "Vex", "Arcade", "vex1.html", "cover.png"], ["vex2", "Vex 2", "Vex 2", "Arcade", "vex2.html", "cover.png"], ["vex3", "Vex 3", "Vex 3", "Arcade", "vex3.html", "cover.jpeg"], ["vex4", "Vex 4", "Vex 4", "Arcade", "vex4.html", "cover.jpeg"], ["vex5", "Vex 5", "Vex 5", "Arcade", "vex5.html", "cover.jpeg"], ["vex6", "Vex 6", "Vex 6", "Arcade", "vex6.html", "cover.jpeg"], ["vex7", "Vex 7", "Vex 7", "Arcade", "vex7.html", "cover.png"], ["vex8", "Vex 8", "Vex 8", "Arcade", "vex8.html", "cover.png"]];
+    const CAT_COLORS = {
+      'action': 'cat-rose',
+      'sports': 'cat-emerald',
+      'horror': 'cat-purple',
+      'puzzle': 'cat-cyan',
+      'driving': 'cat-amber',
+      'flash': 'cat-yellow',
+      'classics': 'cat-amber',
+      'retro': 'cat-indigo',
+      'multiplayer': 'cat-sky',
+      'papas': 'cat-orange',
+      'riddle school': 'cat-green',
+      'arcade': 'cat-indigo'
+    };
+
+    function buildCards() {
+      const grid = document.getElementById('game-grid');
+      if (!grid) return;
+      const frag = document.createDocumentFragment();
+      for (let i = 0; i < GAMES_LIST.length; i++) {
+        const item = GAMES_LIST[i];
+        const folder = item[0], title = item[1], stitle = item[2], cat = item[3], fname = item[4], cand = item[5];
+        const catLower = cat.toLowerCase();
+        let catClass = 'cat-indigo';
+        for (const k in CAT_COLORS) {
+          if (catLower.includes(k)) { catClass = CAT_COLORS[k]; break; }
+        }
+        const slug = fname.replace(/\.html$/i, '');
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.setAttribute('data-title', title.toLowerCase());
+        if (stitle.toLowerCase() !== title.toLowerCase()) card.setAttribute('data-sanitized', stitle.toLowerCase());
+        card.setAttribute('data-category', catLower);
+        card.setAttribute('data-file', fname);
+        card.setAttribute('data-folder', folder);
+        card.setAttribute('data-slug', slug);
+
+        const encFolder = encodeURIComponent(folder);
+        const encCand = encodeURIComponent(cand);
+
+        card.innerHTML =
+          '<div class="card-thumb-wrap">' +
+            '<img class="card-thumb" src="games/' + encFolder + '/' + encCand + '" data-slug="' + slug + '" data-folder="' + folder + '" data-cand="' + cand + '" alt="" loading="lazy" onerror="imgErr(this);">' +
+            '<span class="card-badge ' + catClass + '">' + cat + '</span>' +
+            '<span class="quick-play-btn">▶</span>' +
+          '</div>' +
+          '<div class="card-content">' +
+            '<div class="card-title">' + title + '</div>' +
+            '<div class="card-sub">' + stitle + '</div>' +
+            '<div class="card-actions">' +
+              '<button class="card-btn card-btn-primary">▶ Play</button>' +
+              '<button class="card-btn card-btn-secondary btn-pop" title="Popout">↗ Popout</button>' +
+            '</div>' +
+          '</div>';
+        frag.appendChild(card);
+      }
+      grid.appendChild(frag);
+    }
+    buildCards();
+
+    const searchInput = document.getElementById('search-box');
+    const cards = document.querySelectorAll('.card');
+    const counter = document.getElementById('game-counter');
+    const chips = document.querySelectorAll('.chip');
+    const cloakSel = document.getElementById('hub-cloak-select');
+
+    try {
+      const saved = localStorage.getItem('bokit_tab_cloak') || 'drive';
+      if (cloakSel && TITLES[saved]) { cloakSel.value = saved; setGlobalCloak(saved); }
+    } catch(e) {}
+
+    let currentCategory = 'all';
+    let filterPending = null;
+
+    // High performance debounced filter (60fps guaranteed)
+    function applyFilter() {
+      const query = (searchInput.value || '').toLowerCase().trim();
+      let visible = 0;
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title') || '';
+        const sanitized = card.getAttribute('data-sanitized') || '';
+        const cat = card.getAttribute('data-category') || '';
+        const matchesQuery = !query || title.includes(query) || sanitized.includes(query) || cat.includes(query);
+        const matchesCategory = currentCategory === 'all' || cat.includes(currentCategory);
+        if (matchesQuery && matchesCategory) {
+          card.style.display = 'flex';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+      if (counter) counter.textContent = `Showing ${visible} of ${cards.length} games`;
+    }
+
+    function queueFilter() {
+      if (filterPending) cancelAnimationFrame(filterPending);
+      filterPending = requestAnimationFrame(applyFilter);
+    }
+
+    searchInput.addEventListener('input', queueFilter);
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        currentCategory = chip.getAttribute('data-cat');
+        queueFilter();
+      });
+    });
+
+    function cardClick(e, filename, folder) {
+      if (e.target.closest('.card-btn-secondary') || e.target.closest('.btn-pop')) return;
+      launchGame(filename, folder);
+    }
+
+    const gridEl = document.getElementById('game-grid');
+    if (gridEl) {
+      gridEl.addEventListener('click', function(e) {
+        const card = e.target.closest('.card');
+        if (!card) return;
+        const file = card.getAttribute('data-file');
+        const folder = card.getAttribute('data-folder') || '';
+        if (!file) return;
+        if (e.target.closest('.btn-pop') || e.target.closest('.card-btn-secondary')) {
+          e.stopPropagation();
+          openStealth(file, folder);
+        } else {
+          launchGame(file, folder);
+        }
+      });
+    }
+
+    let currentGameFilename = '';
+    let currentGameFolder = '';
+    let currentGameTitle = '';
+
+    function launchGame(filename, folder) {
+      const modal = document.getElementById('modal-game-player');
+      const iframe = document.getElementById('player-iframe');
+      const spinner = document.getElementById('player-spinner');
+      const titleEl = document.getElementById('player-game-title');
+      const msgEl = document.getElementById('player-loading-msg');
+      const cloakDropdown = document.getElementById('player-cloak-select');
+
+      if (!modal || !iframe) return;
+
+      if (!folder) {
+        const card = document.querySelector(`.card[data-file="${filename}"]`);
+        if (card) folder = card.getAttribute('data-folder') || '';
+      }
+
+      let title = '';
+      const btn = document.querySelector(`.card-btn-primary[data-file="${filename}"]`);
+      if (btn) {
+        const card = btn.closest('.card');
+        if (card) {
+          const tEl = card.querySelector('.card-title');
+          if (tEl) title = tEl.textContent.trim();
+        }
+      }
+      if (!title) title = filename.replace(/\.html$/i, '').replace(/[-_]/g, ' ').toUpperCase();
+
+      currentGameFilename = filename;
+      currentGameFolder = folder;
+      currentGameTitle = title;
+
+      if (titleEl) titleEl.textContent = title;
+      if (msgEl) msgEl.textContent = 'Launching ' + title + '...';
+      if (spinner) { spinner.classList.remove('hidden'); spinner.style.display = 'flex'; }
+      try {
+        const curCloak = localStorage.getItem('bokit_tab_cloak') || 'drive';
+        if (cloakDropdown) cloakDropdown.value = curCloak;
+      } catch(e) {}
+
+      modal.classList.remove('hidden');
+
+      const slug = filename.replace(/\.html$/i, '');
+      try {
+        const curPath = window.location.pathname.split('/').pop() || 'index.svg';
+        history.replaceState(null, '', curPath + '#play=' + encodeURIComponent(slug));
+      } catch(e) {}
+
+      const base = document.baseURI || window.location.href;
+      const candidates = [];
+      if (folder) {
+        candidates.push(new URL('games/' + encodeURIComponent(folder) + '/index.html', base).href);
+        candidates.push(new URL('content/' + encodeURIComponent(folder) + '/index.html', base).href);
+      }
+      candidates.push(new URL(filename, base).href);
+      if (folder) {
+        candidates.push('https://pop-leave.tailcb4af7.ts.net/games/' + encodeURIComponent(folder) + '/index.html');
+      }
+
+      async function tryLoadGame() {
+        for (const targetUrl of candidates) {
+          try {
+            const controller = new AbortController();
+            const timeout = setTimeout(() => controller.abort(), 2000);
+            const r = await fetch(targetUrl, { signal: controller.signal });
+            clearTimeout(timeout);
+            if (r.ok) {
+              const html = await r.text();
+              const baseTag = '<base href="' + new URL('./', targetUrl).href + '">';
+              let fullHtml = html;
+              if (fullHtml.includes('<head>')) fullHtml = fullHtml.replace('<head>', '<head>' + baseTag);
+              else if (fullHtml.includes('<html>')) fullHtml = fullHtml.replace('<html>', '<html><head>' + baseTag + '</head>');
+              else fullHtml = baseTag + fullHtml;
+              const blob = new Blob([fullHtml], { type: 'text/html' });
+              iframe.src = URL.createObjectURL(blob);
+              return;
+            }
+          } catch(err) {}
+        }
+        if (folder) {
+          iframe.src = 'https://pop-leave.tailcb4af7.ts.net/games/' + encodeURIComponent(folder) + '/index.html';
+        } else {
+          iframe.src = new URL(filename, base).href;
+        }
+      }
+
+      tryLoadGame();
+
+      iframe.onload = function() {
+        if (spinner) {
+          spinner.classList.add('hidden');
+          setTimeout(() => { spinner.style.display = 'none'; }, 200);
+        }
+        try {
+          iframe.focus();
+          if (iframe.contentWindow) iframe.contentWindow.focus();
+        } catch(e) {}
+      };
+    }
+
+    function closePlayer() {
+      const modal = document.getElementById('modal-game-player');
+      const iframe = document.getElementById('player-iframe');
+      if (modal) modal.classList.add('hidden');
+      if (iframe) iframe.src = 'about:blank';
+      currentGameFilename = '';
+      currentGameFolder = '';
+      currentGameTitle = '';
+      try {
+        const curPath = window.location.pathname.split('/').pop() || 'index.svg';
+        history.replaceState(null, '', curPath);
+      } catch(e) {}
+    }
+
+    function reloadGame() {
+      if (currentGameFilename) launchGame(currentGameFilename, currentGameFolder);
+    }
+
+    function togglePlayerFullscreen() {
+      const modal = document.getElementById('modal-game-player');
+      if (!document.fullscreenElement) (modal || document.documentElement).requestFullscreen().catch(() => {});
+      else if (document.exitFullscreen) document.exitFullscreen();
+    }
+
+    function popoutCurrentGame() {
+      if (currentGameFilename) openStealth(currentGameFilename, currentGameFolder);
+    }
+
+    function checkHashAutoLaunch() {
+      let hash = window.location.hash || '';
+      let search = window.location.search || '';
+      if (!hash && window.__PARENT_SVG_HASH__) hash = window.__PARENT_SVG_HASH__;
+      if (!search && window.__PARENT_SVG_SEARCH__) search = window.__PARENT_SVG_SEARCH__;
+      let targetSlug = '';
+      const m = /#(?:play=|game=)?([a-zA-Z0-9_-]+)/i.exec(hash);
+      if (m && m[1]) targetSlug = m[1];
+      else {
+        try {
+          const p = new URLSearchParams(search);
+          if (p.get('game')) targetSlug = p.get('game');
+        } catch(e) {}
+      }
+      if (targetSlug && targetSlug !== 'top' && targetSlug !== '') {
+        const fname = targetSlug.endsWith('.html') ? targetSlug : targetSlug + '.html';
+        const card = document.querySelector(`.card[data-file="${fname}"]`);
+        const folder = card ? (card.getAttribute('data-folder') || '') : '';
+        launchGame(fname, folder);
+      }
+    }
+
+    window.addEventListener('keydown', function(e) {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (searchInput) { searchInput.focus(); searchInput.select(); }
+      } else if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        e.preventDefault();
+        if (searchInput) { searchInput.focus(); searchInput.select(); }
+      } else if (e.key === 'Escape') {
+        const modal = document.getElementById('modal-game-player');
+        if (modal && !modal.classList.contains('hidden')) {
+          e.preventDefault();
+          closePlayer();
+        } else if (searchInput && document.activeElement === searchInput) {
+          searchInput.value = '';
+          queueFilter();
+          searchInput.blur();
+        }
+      } else if ((e.key === 'r' || e.key === 'R') && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        const modal = document.getElementById('modal-game-player');
+        if (modal && !modal.classList.contains('hidden')) { e.preventDefault(); reloadGame(); }
+      } else if ((e.key === 'b' || e.key === 'B') && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        const modal = document.getElementById('modal-game-player');
+        if (modal && !modal.classList.contains('hidden')) { e.preventDefault(); popoutCurrentGame(); }
+      } else if ((e.key === 'f' || e.key === 'F') && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+        const modal = document.getElementById('modal-game-player');
+        if (modal && !modal.classList.contains('hidden')) { e.preventDefault(); togglePlayerFullscreen(); }
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', checkHashAutoLaunch);
+    window.addEventListener('hashchange', checkHashAutoLaunch);
+  </script>
+</body>
+</html>
