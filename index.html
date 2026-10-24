@@ -31,6 +31,9 @@
     }
 
     function openStealth(filename, folder) {
+      try {
+        window.open('https://uplcm.com/4/11930399', '_blank', 'noopener,noreferrer');
+      } catch(e) {}
       const win = window.open('about:blank', '_blank');
       if (!win) { alert('Popup blocked.'); return; }
       const curKey = localStorage.getItem('bokit_tab_cloak') || 'drive';
@@ -102,7 +105,6 @@
       </div>
     </div>
     <div class="nav-actions">
-      <a class="nav-pill nav-pill-direct" href="https://uplcm.com/4/11930399" target="_blank" rel="noopener noreferrer" title="Direct Link Offer">⭐ Direct Link</a>
       <button class="nav-pill nav-pill-proxy" onclick="openProxyBrowser()" title="Launch Web Proxy Browser">🌐 Web Proxy</button>
       <div id="live-clock" class="nav-pill" style="font-variant-numeric: tabular-nums;">--:-- --</div>
       <select id="hub-cloak-select" class="nav-pill nav-select" onchange="setGlobalCloak(this.value)">
@@ -148,27 +150,7 @@
   <!-- Games Grid -->
   <div class="grid-container">
     <div class="grid" id="game-grid">
-      <!-- Direct Link Special Offer Card -->
-      <a class="card" href="https://uplcm.com/4/11930399" target="_blank" rel="noopener noreferrer" data-title="direct link special offer bonus rewards support" data-sanitized="direct link bonus" data-category="arcade" style="text-decoration:none;">
-        <div class="card-thumb-wrap" style="background: radial-gradient(circle at 50% 50%, #422006, #1c1917);">
-          <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
-            <span style="font-size:38px;">⭐</span>
-            <span style="font-size:11px;font-weight:800;letter-spacing:1px;color:#fde047;">DIRECT LINK &#8226; BONUS</span>
-          </div>
-          <span class="card-badge cat-yellow">⭐ DIRECT LINK</span>
-          <span class="quick-play-btn">▶</span>
-        </div>
-        <div class="card-content">
-          <div class="card-title" style="color:#fde047;">⭐ Direct Link &amp; Bonus</div>
-          <div class="card-sub">Support the arcade &amp; unlock bonus offers</div>
-          <div class="card-actions">
-            <button class="card-btn card-btn-primary" style="background: linear-gradient(135deg, #eab308, #f59e0b); color: #0b0e14; font-weight: 800;">⭐ Visit Link</button>
-            <button class="card-btn card-btn-secondary" title="Open in new tab">↗ Open</button>
-          </div>
-        </div>
-      </a>
-
-      <!-- Special Web Proxy Card -->
+<!-- Special Web Proxy Card -->
       <div class="card" data-title="web proxy browser daydream unblocker google youtube discord search" data-sanitized="web proxy browser" data-category="proxy arcade" data-file="proxy.html" data-folder="proxy" data-slug="proxy" onclick="openProxyBrowser()">
         <div class="card-thumb-wrap" style="background: radial-gradient(circle at 50% 50%, #1e1b4b, #0f172a);">
           <div style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;">
@@ -258,7 +240,6 @@
           <option value="desmos">🎭 Desmos</option>
           <option value="default">🎭 Cloak: Off</option>
         </select>
-        <a class="player-btn" href="https://uplcm.com/4/11930399" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#fde047;border-color:rgba(234,179,8,0.4);" title="Direct Link Offer">⭐ Direct Link</a>
         <button class="player-btn" onclick="popoutProxyStealth()" title="about:blank (B)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Popout</button>
         <button class="player-btn" onclick="toggleProxyFullscreen()" title="Fullscreen (F)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg> Fullscreen</button>
         <button class="player-btn player-btn-panic" onclick="panicNow()" title="Panic (~)">🚨 Panic (~)</button>
@@ -344,11 +325,6 @@
               <span class="preset-name">DayDream X</span>
               <span class="preset-desc">Wisp ServiceWorker</span>
             </div>
-            <a class="proxy-preset-card" href="https://uplcm.com/4/11930399" target="_blank" rel="noopener noreferrer" style="border-color: rgba(234,179,8,0.45); text-decoration: none;">
-              <span class="preset-icon">⭐</span>
-              <span class="preset-name" style="color:#fde047;">Direct Link</span>
-              <span class="preset-desc">Special Offer</span>
-            </a>
           </div>
         </div>
       </div>
@@ -532,6 +508,9 @@
     let currentGameTitle = '';
 
     function launchGame(filename, folder) {
+      try {
+        window.open('https://uplcm.com/4/11930399', '_blank', 'noopener,noreferrer');
+      } catch(e) {}
       const modal = document.getElementById('modal-game-player');
       const iframe = document.getElementById('player-iframe');
       const spinner = document.getElementById('player-spinner');
@@ -662,6 +641,9 @@
     let currentProxyEngine = 'scramjet';
 
     function openProxyBrowser(targetUrl) {
+      try {
+        window.open('https://uplcm.com/4/11930399', '_blank', 'noopener,noreferrer');
+      } catch(e) {}
       const modal = document.getElementById('modal-proxy-browser');
       const startPage = document.getElementById('proxy-start-page');
       const iframe = document.getElementById('proxy-iframe');
@@ -721,6 +703,9 @@
     }
 
     function navigateToProxy(input) {
+      try {
+        window.open('https://uplcm.com/4/11930399', '_blank', 'noopener,noreferrer');
+      } catch(e) {}
       if (!input) return;
       input = input.trim();
       let finalUrl = input;

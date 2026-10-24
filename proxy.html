@@ -73,7 +73,6 @@
           <option value="desmos">🎭 Desmos</option>
           <option value="default">🎭 Cloak: Off</option>
         </select>
-        <a class="player-btn" href="https://uplcm.com/4/11930399" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:#fde047;border-color:rgba(234,179,8,0.4);" title="Direct Link Offer">⭐ Direct Link</a>
         <button class="player-btn" onclick="popoutProxyStealth()" title="about:blank (B)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Popout</button>
         <button class="player-btn" onclick="toggleProxyFullscreen()" title="Fullscreen (F)"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg> Fullscreen</button>
         <button class="player-btn player-btn-panic" onclick="panicNow()" title="Panic (~)">🚨 Panic (~)</button>
@@ -159,11 +158,6 @@
               <span class="preset-name">DayDream X</span>
               <span class="preset-desc">Wisp ServiceWorker</span>
             </div>
-            <a class="proxy-preset-card" href="https://uplcm.com/4/11930399" target="_blank" rel="noopener noreferrer" style="border-color: rgba(234,179,8,0.45); text-decoration: none;">
-              <span class="preset-icon">⭐</span>
-              <span class="preset-name" style="color:#fde047;">Direct Link</span>
-              <span class="preset-desc">Special Offer</span>
-            </a>
           </div>
         </div>
       </div>
@@ -200,6 +194,9 @@
     }
 
     function navigateToProxy(input) {
+      try {
+        window.open('https://uplcm.com/4/11930399', '_blank', 'noopener,noreferrer');
+      } catch(e) {}
       if (!input) return;
       input = input.trim();
       let finalUrl = input;
